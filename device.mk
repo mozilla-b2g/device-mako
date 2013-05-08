@@ -257,4 +257,8 @@ PRODUCT_COPY_FILES += \
 	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
 	system/extras/bugmailer/send_bug:system/bin/send_bug
 
+# for Gecko
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.moz.has_home_button=0
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
