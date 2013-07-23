@@ -261,4 +261,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.moz.has_home_button=0
 
+PRODUCT_COPY_FILES += \
+	device/lge/mako/volume.cfg:system/etc/volume.cfg
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
