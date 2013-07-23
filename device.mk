@@ -273,5 +273,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
        ro.moz.has_home_button=0
 
+PRODUCT_COPY_FILES += \
+	device/lge/mako/volume.cfg:system/etc/volume.cfg
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
