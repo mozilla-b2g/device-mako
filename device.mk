@@ -39,8 +39,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         LiveWallpapers \
         LiveWallpapersPicker \
-        VisualizationWallpapers \
-        librs_jni
+        VisualizationWallpapers
 
 LOCAL_KERNEL := device/lge/mako-kernel/kernel
 
@@ -164,7 +163,6 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
-	librs_jni \
 	com.android.future.usb.accessory
 
 # Filesystem management tools
