@@ -261,6 +261,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.moz.has_home_button=0
 
+# for Gecko to support bluedroid stack
+PRODUCT_PACKAGES += \
+	bluetooth.default
+
 PRODUCT_COPY_FILES += \
 	device/lge/mako/volume.cfg:system/etc/volume.cfg
 
