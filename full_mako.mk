@@ -17,8 +17,15 @@
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
+# Live Wallpapers
+PRODUCT_PACKAGES += \
+        LiveWallpapers \
+        LiveWallpapersPicker \
+        VisualizationWallpapers
+
+
 # Get the long list of APNs
-PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES := device/lge/mako/apns-full-conf.xml:system/etc/apns-conf.xml
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -29,6 +36,14 @@ PRODUCT_BRAND := Android
 PRODUCT_MODEL := AOSP on Mako
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := true
+
+# Todo kitkat 
+WITHOUT_CLANG := true
+
+# Use device's init.rc no need to patch in gonk-misc
+TARGET_PROVIDES_B2G_INIT_RC := true
+PRODUCT_COPY_FILES += \
+  device/lge/mako/init.rc:root/init.rc
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/mako/device.mk)
