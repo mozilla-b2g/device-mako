@@ -274,5 +274,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	device/lge/mako/volume.cfg:system/etc/volume.cfg
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.moz.nfc.enabled=true
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
