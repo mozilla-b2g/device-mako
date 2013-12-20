@@ -33,3 +33,7 @@ PRODUCT_RESTRICT_VENDOR_FILES := true
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/mako/device.mk)
 $(call inherit-product-if-exists, vendor/lge/mako/device-vendor.mk)
+
+# Gaia currently needs to specify the default scale value manually or pictures
+# with correct resolution will not be applied.
+GAIA_DEV_PIXELS_PER_PX := 1.5
