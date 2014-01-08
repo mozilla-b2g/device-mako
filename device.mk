@@ -277,5 +277,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.moz.nfc.enabled=true
 
+# for Gaia - set default scale value
+GAIA_DEV_PIXELS_PER_PX = 1.5
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
