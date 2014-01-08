@@ -28,6 +28,9 @@ DEVICE_PACKAGE_OVERLAYS := device/lge/mako/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Set the default scale value for Gaia
+GAIA_DEV_PIXELS_PER_PX = 1.5
+
 PRODUCT_PACKAGES := \
 	lights.msm8960
 
