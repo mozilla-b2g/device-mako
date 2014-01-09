@@ -45,7 +45,8 @@ TARGET_BOOTLOADER_BOARD_NAME := MAKO
 TARGET_BOOTLOADER_NAME=mako
 TARGET_BOARD_INFO_FILE := device/lge/mako/board-info.txt
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/mako/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/mako/bluetooth \
+                                               $(GECKO_PATH)/dom/bluetooth/bluedroid/gonk
 
 # FIXME: HOSTAPD-derived wifi driver
 BOARD_HAS_QCOM_WLAN := true
