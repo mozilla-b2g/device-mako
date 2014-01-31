@@ -17,6 +17,15 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
+/**
+ * B2G common configuration. The header is under
+ *   $(GECKO_PATH)/dom/bluetooth/bluedroid/
+ */
+#include "b2g_bdroid_buildcfg.h"
+
+/**
+ * Device specific configuration
+ */
 #define BTM_DEF_LOCAL_NAME   "Nexus 4"
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 
