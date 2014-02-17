@@ -158,7 +158,6 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
-	librs_jni \
 	com.android.future.usb.accessory
 
 # Filesystem management tools
@@ -268,6 +267,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
+
+# for Gecko
+PRODUCT_PROPERTY_OVERRIDES += \
+       ro.moz.has_home_button=0
+
+# for Gecko to support bluedroid stack
+PRODUCT_PACKAGES += \
+	bluetooth.default \
+	nfcd
+
+PRODUCT_COPY_FILES += \
+	device/lge/mako/volume.cfg:system/etc/volume.cfg
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
