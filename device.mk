@@ -272,6 +272,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # for Gecko to support bluedroid stack
 PRODUCT_PACKAGES += \
 	bluetooth.default \
+	bluetoothd \
 	nfcd
 
 PRODUCT_COPY_FILES += \
