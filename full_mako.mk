@@ -37,6 +37,10 @@ PRODUCT_MODEL := AOSP on Mako
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
+TARGET_DEVICE_BLOBS := vendor/lge/mako/device-partial.mk \
+                       vendor/broadcom/mako/device-partial.mk \
+                       vendor/qcom/mako/device-partial.mk
+
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/mako/device.mk)
 $(call inherit-product-if-exists, vendor/lge/mako/device-vendor.mk)
