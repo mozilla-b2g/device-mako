@@ -1,0 +1,13 @@
+[
+  {
+    "id": "Nexus 4",
+    "adb": {
+      "ro.product.device": [ "mako" ],
+      "ro.bootloader": "MAKOZ20i",
+      "ro.build.id": "JSS15J"
+    },
+    "fastboot": {
+      "product": [ "mako" ]
+    }
+  }
+]
