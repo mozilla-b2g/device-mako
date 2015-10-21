@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# Use default Gecko location if it's not provided in config files.
-GECKO_PATH ?= gecko
-
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi-v7a
@@ -48,8 +45,9 @@ TARGET_BOOTLOADER_BOARD_NAME := MAKO
 TARGET_BOOTLOADER_NAME=mako
 TARGET_BOARD_INFO_FILE := device/lge/mako/board-info.txt
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/mako/bluetooth \
-                                               $(GECKO_PATH)/dom/bluetooth/bluedroid
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := \
+  device/lge/mako/bluetooth \
+  hardware/libhardware_moz/include/hardware_moz/bluetooth/bluedroid
 
 # FIXME: HOSTAPD-derived wifi driver
 BOARD_HAS_QCOM_WLAN := true
