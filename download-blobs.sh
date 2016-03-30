@@ -35,9 +35,9 @@ install_blobs() {
 }
 
 MAKO_BLOBS="
-    broadcom-mako-jwr66v-cbde0d61.tgz
-    lge-mako-jwr66v-985845e4.tgz
-    qcom-mako-jwr66v-30ef957c.tgz
+    broadcom-mako-jwr66y-137ef66d.tgz
+    lge-mako-jwr66y-a85ca75e.tgz
+    qcom-mako-jwr66y-a5becaf1.tgz
     "
 
 CSUM_LIST="$PWD/blob-shasums"
