@@ -73,6 +73,16 @@ TARGET_USES_C2D_COMPOSITON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_mako
 
+# Recovery
+ENABLE_LIBRECOVERY := true
+
+# librecovery
+RECOVERY_EXTERNAL_STORAGE := /data/media/0
+
+SYSTEM_FS_TYPE        := ext4
+SYSTEM_PARTITION_TYPE := EMMC
+SYSTEM_LOCATION       := /dev/block/platform/msm_sdcc.1/by-name/system
+
 TARGET_RECOVERY_FSTAB = device/lge/mako/fstab.mako
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 23068672 # 22M
